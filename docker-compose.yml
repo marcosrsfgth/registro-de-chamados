@@ -1,0 +1,9 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: chamados
+      POSTGRES_USER: ${DB_USER:-chamados}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-chamados}
+    ports:
+      - "5432:5432"
